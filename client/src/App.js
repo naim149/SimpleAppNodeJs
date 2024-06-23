@@ -26,16 +26,17 @@ function App() {
     };
 
     // Simulating server call
-    axios.post('/api/optimize', { systemParameters: params, students })
-      .then(response => setResults(response.data.states))
-      .catch(error => console.error(error));
+    
+    axios.post(`${process.env.REACT_APP_API_URL}/api/optimize`, { systemParameters: params, students })
+    .then(response => setResults(response.data.states))
+    .catch(error => console.error(error));
   };
 
   return (
     <Container maxWidth="false" className="container">
       <Typography variant="h2" align="center" gutterBottom>Resource Allocation App</Typography>
       <Grid container spacing={3}>
-        <Grid item xs={3} className="paper-left">
+        <Grid item xs={4} className="paper-left">
           <Paper elevation={3} style={{ padding: '10px', marginTop: '20px' }}>
             <Typography variant="h5" align="center" gutterBottom>System Parameters</Typography>
             <Container>
@@ -47,7 +48,7 @@ function App() {
             <StudentGrid students={students} setStudents={setStudents} />
           </Paper>
         </Grid>
-        <Grid item xs={9} className="paper-right">
+        <Grid item xs={8} className="paper-right">
           <OptimizationResults results={results} />
         </Grid>
       </Grid>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableRow, Typography, Paper } from '@mui/material';
-import { green, red } from '@mui/material/colors';
+import { green, orange, red } from '@mui/material/colors';
 import './OptimizationResults.css';
 
 const OptimizationResults = ({ results }) => {
@@ -29,11 +29,11 @@ const OptimizationResults = ({ results }) => {
                   const currentStudent = state.students[studentIndex];
                   return (
                     <TableCell  align="center" key={timeIndex}>
-                      <div>Battery: {currentStudent.battery_level.toFixed(2)}</div>
+                      <div>{currentStudent.battery_level.toFixed(2)}</div>
                       <div style={{ color: currentStudent.operational ? green[500] : red[500] }}>
                         {currentStudent.operational ? 'On' : 'Off'}
                       </div>
-                      <div style={{ color: currentStudent.has_socket ? green[500] : 'inherit' }}>
+                      <div style={{ color: currentStudent.has_socket ? orange[500] : 'inherit' }}>
                         {currentStudent.has_socket ? 'Charging' : ''}
                       </div>
                     </TableCell>
