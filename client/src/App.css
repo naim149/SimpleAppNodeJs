@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.paper-left {
+  padding: 10px;
+  max-width: 220px;
+}
+
+.paper-right {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.paper-content {
+  padding: 10px;
+}
+
+.optimize-button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.text-field {
+  font-size: 12px;
+  padding: 5px;
+}
+
+.MuiInputBase-input {
+  font-size: 12px;
+  padding: 5px;
+}
