@@ -13,3 +13,6 @@ A simple full-stack application with a Node.js backend and a React frontend.
 ```sh
 git clone https://github.com/naim149/SimpleAppNodeJs.git
 cd SimpleAppNodeJs
+
+#### Run the app 
+docker-compose up --build
